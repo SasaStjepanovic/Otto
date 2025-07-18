@@ -5,6 +5,7 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
@@ -68,6 +69,14 @@ public class BasePage {
             element.sendKeys(text);
             System.out.println("Entered text: " + text + " :to element: " + log);
         }
+    }
+
+    public void dropDownMenu(WebElement element, String item){
+        explicitWait(element);
+
+        Select select = new Select(element);
+        select.selectByVisibleText(item);
+
     }
 
 
