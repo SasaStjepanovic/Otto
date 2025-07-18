@@ -5,16 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5617e24e-d378-4078-ab91-26967cc3e779" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/features/1_Lanes.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/features/1_Login.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/features/2_Report.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/runners/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/Runner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/features/1.KPI Sensors_Lanes.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/1.KPI Sensors_Lanes.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/LanesPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/LanesPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/steps/BaseSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/BaseSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/test_data/otto.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/test_data/otto.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/test_data/~$otto.xlsx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +49,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Cucumber Java.Feature: 1.KPI Sensors_Lanes.executor": "Run",
     "Cucumber Java.Feature: 1_Login.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -61,7 +57,7 @@
     "TestNG.Runner.executor": "Run",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Lenovo/Desktop/QAprojekti/Automation_projekti/Swaglabs"
+    "last_opened_file_path": "C:/Users/Lenovo/Desktop/QAprojekti/Automation_projekti/Otto/src/test/java/features"
   }
 }]]></component>
   <component name="RecentsManager">
