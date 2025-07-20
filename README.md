@@ -1,7 +1,6 @@
 # OTTOMETRIC
 #### Accelerating ADAS Validation and AV Training
-### https://qa-ottoviz.ominf.net/) ###
-#### All recognized problems are reported in the 'Issues' tab of Github ####
+### https://qa-ottoviz.ominf.net/ ###
 ***
 ***
 ## Preconditions
