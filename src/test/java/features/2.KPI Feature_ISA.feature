@@ -13,6 +13,7 @@ Feature: Log in to the application,select program Camera System VT1, navigate to
     And user selects zone1 option
     And user selects DTIDs
     And user clicks preview button
+    And user checks new tab is opened
     Then user counts all FN events
 
     Examples:

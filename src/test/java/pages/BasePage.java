@@ -1,21 +1,10 @@
 package pages;
 
-import io.qameta.allure.Allure;
-import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
-
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.concurrent.TimeUnit;
 
 public class BasePage {
 
@@ -71,13 +60,11 @@ public class BasePage {
         }
     }
 
-    public void dropDownMenu(WebElement element, String item){
+    public void dropDownMenu(WebElement element, String item) {
         explicitWait(element);
 
         Select select = new Select(element);
         select.selectByVisibleText(item);
 
     }
-
-
 }

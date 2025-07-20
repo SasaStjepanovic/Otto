@@ -9,7 +9,7 @@ import io.cucumber.java.en.Then;
 import org.testng.Assert;
 import org.testng.Reporter;
 import pages.BasePage;
-//import pages.IsaPage;
+import pages.IsaPage;
 import pages.LanesPage;
 import pages.LoginPage;
 import tests.BaseTest;
@@ -32,7 +32,7 @@ public class BaseSteps extends BaseTest {
 
     @After
     public void tearDown() {
-//        quit();
+        quit();
     }
 
     @Given("a user reads test data from {string} {string} by id {string}")
@@ -74,45 +74,36 @@ public class BaseSteps extends BaseTest {
 
     @Then("user compares the average of the row values with the total value")
     public void userComparesTheAverageOfTheRowValuesWithTheTotalValue() {
-//        new LanesPage(driver).checkSumValuesFromAllRowsWithTotalRowForColumn1();
-//        new LanesPage(driver).checkSumValuesFromAllRowsWithTotalRowForColumn2();
-//        new LanesPage(driver).checkSumValuesFromAllRowsWithTotalRowForColumn3();
-//        new LanesPage(driver).checkSumValuesFromAllRowsWithTotalRowForColumn4();
-//        new LanesPage(driver).checkSumValuesFromAllRowsWithTotalRowForColumn5();
-//        new LanesPage(driver).checkSumValuesFromAllRowsWithTotalRowForColumn6();
-//        new LanesPage(driver).checkSumValuesFromAllRowsWithTotalRowForColumn7();
-//        new LanesPage(driver).checkSumValuesFromAllRowsWithTotalRowForColumn8();
-//        new LanesPage(driver).checkSumValuesFromAllRowsWithTotalRowForColumn9();
-//        new LanesPage(driver).checkSumValuesFromAllRowsWithTotalRowForColumn10();
-//        new LanesPage(driver).checkSumValuesFromAllRowsWithTotalRowForColumn11();
-//        new LanesPage(driver).checkSumValuesFromAllRowsWithTotalRowForColumn12();
-//        new LanesPage(driver).checkSumValuesFromAllRowsWithTotalRowForColumn13();
-//        new LanesPage(driver).checkSumValuesFromAllRowsWithTotalRowForColumn14();
         new LanesPage(driver).checkSumValuesFromAllRowsWithTotalRowForColumn();
     }
 
-//    @And("user selects camera system v{int}")
-//    public void userSelectsCameraSystemV(int arg0) {
-//        new IsaPage(driver).selectProgramItem();
-//    }
-//
-//    @And("user selects zone{int} option")
-//    public void userSelectsZoneOption(int arg0) throws InterruptedException {
-//        new IsaPage(driver).selectZone1();
-//    }
-//
-//    @And("user selects DTIDs")
-//    public void userSelectsDTIDs() {
-//        new IsaPage(driver).selectDTIDs((data.get("numberDTDTs")));
-//    }
-//
-//    @And("user clicks preview button")
-//    public void userClicksPreviewButton() {
-//        new IsaPage(driver).previewButton();
-//    }
-//
-//    @Then("user counts all FN events")
-//    public void userCountsAllFNEvents() {
-//        new IsaPage(driver).getAllDTIDsFNevents();
-//    }
+    @And("user selects camera system v{int}")
+    public void userSelectsCameraSystemV(int arg0) {
+        new IsaPage(driver).selectProgramItem();
+    }
+
+    @And("user selects zone{int} option")
+    public void userSelectsZoneOption(int arg0) throws InterruptedException {
+        new IsaPage(driver).selectZone1();
+    }
+
+    @And("user selects DTIDs")
+    public void userSelectsDTIDs() {
+        new IsaPage(driver).selectDTIDs((data.get("numberDTDTs")));
+    }
+
+    @And("user clicks preview button")
+    public void userClicksPreviewButton() {
+        new IsaPage(driver).previewButton();
+    }
+
+    @Then("user counts all FN events")
+    public void userCountsAllFNEvents() {
+        new IsaPage(driver).getAllDTIDsFNevents();
+    }
+
+    @And("user checks new tab is opened")
+    public void userChecksNewTabIsOpened() throws InterruptedException {
+        new IsaPage(driver).checkNewOpenedTab();
+    }
 }

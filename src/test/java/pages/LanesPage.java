@@ -36,7 +36,7 @@ public class LanesPage extends BasePage {
         clickElement(pickerMenuButtonEl, "Picker menu program is expand");
     }
 
-    public void selectProgramItem(){
+    public void selectProgramItem() {
         clickElement(programPickerMenuItemEl, "Picker element is selected");
     }
 
@@ -47,9 +47,11 @@ public class LanesPage extends BasePage {
         Thread.sleep(500);
     }
 
-    public void checkSumValuesFromAllRowsWithTotalRowForColumn(){
+    public void checkSumValuesFromAllRowsWithTotalRowForColumn() {
 
-        for (int i = 1; i < 15; i++){
+        List<WebElement> numberOfColumns = driver.findElements(By.xpath("//*[@data-testid='tbody-center']/tr[2]/td"));
+
+        for (int i = 1; i <= numberOfColumns.size(); i++) {
             double total = 0.0; //sum of all rows for one column
             int count = 0; //count how many values/rows read
 
@@ -57,9 +59,9 @@ public class LanesPage extends BasePage {
             List<WebElement> cellValues = driver.findElements(By.xpath("//*[@data-testid='tbody-center']/tr[position() <= 38]/td[" + i + "]"));
 
             for (WebElement cell : cellValues) {
-                String text = cell.getText().replace("%", "").trim(); // Remove % symbol
-                if (!text.isEmpty()) {
-                    double value = Double.parseDouble(text);
+                String text1 = cell.getText().replace("%", "").trim(); // Remove % symbol
+                if (!text1.isEmpty()) {
+                    double value = Double.parseDouble(text1);
                     total += value;
                     count++;
                 }
@@ -74,11 +76,10 @@ public class LanesPage extends BasePage {
             WebElement totalRow = driver.findElement(By.xpath("//table[@data-testid='table-center']//tfoot[@class='MuiTableFooter-root css-1q1uqq3']//tr/td[" + i + "]"));
             String text2 = totalRow.getText().replace("%", "").trim();
             double totalAverage = Double.parseDouble(text2);
-            System.out.println("Existing Total: " + totalAverage + "%");
+            System.out.println("Total: " + totalAverage + "%");
 
-            // Compare with deviation of 0.1
-
-            if (Math.abs(average - totalAverage) < 0.1) {
+            // Compare with deviation of 0.01
+            if (Math.abs(average - totalAverage) < 0.01) {
                 System.out.println("Match: Calculated value matches the total.");
                 System.out.println("==========================================");
             } else {
